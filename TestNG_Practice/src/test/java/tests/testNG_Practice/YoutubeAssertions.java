@@ -1,8 +1,9 @@
 package tests.testNG_Practice;
 
-import org.junit.Assert;
-import org.junit.Test;
+
 import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -19,7 +20,7 @@ public class YoutubeAssertions {
         Driver.getDriver().get(ConfigReader.getProperty("youtubeUrl"));
         String expectedTitle = "YouTube";
         String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals(expectedTitle,actualTitle);
+        Assert.assertEquals(actualTitle,expectedTitle);
         Driver.closeDriver();
 
     }
